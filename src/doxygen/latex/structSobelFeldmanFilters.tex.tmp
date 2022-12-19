@@ -1,0 +1,46 @@
+\hypertarget{structSobelFeldmanFilters}{}\doxysection{Sobel\+Feldman\+Filters Struct Reference}
+\label{structSobelFeldmanFilters}\index{SobelFeldmanFilters@{SobelFeldmanFilters}}
+
+
+3-\/dimensional Sobel-\/\+Feldman filters  
+
+
+
+
+{\ttfamily \#include $<$sobel.\+h$>$}
+
+
+
+Collaboration diagram for Sobel\+Feldman\+Filters\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSobelFeldmanFilters_1_1XDirection}{X\+Direction}}
+\item 
+struct \mbox{\hyperlink{structSobelFeldmanFilters_1_1YDirection}{Y\+Direction}}
+\item 
+struct \mbox{\hyperlink{structSobelFeldmanFilters_1_1ZDirection}{Z\+Direction}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structSobelFeldmanFilters_a081c79de0e005ed4fe86905946ed0669}\label{structSobelFeldmanFilters_a081c79de0e005ed4fe86905946ed0669}} 
+\mbox{\hyperlink{structSobelFeldmanFilters_1_1ZDirection}{Z\+Direction}} {\bfseries zdir}
+\item 
+\mbox{\Hypertarget{structSobelFeldmanFilters_a0ada260daee19d8f8800b2c8d7bf056f}\label{structSobelFeldmanFilters_a0ada260daee19d8f8800b2c8d7bf056f}} 
+\mbox{\hyperlink{structSobelFeldmanFilters_1_1XDirection}{X\+Direction}} {\bfseries xdir}
+\item 
+\mbox{\Hypertarget{structSobelFeldmanFilters_a4c602b545ef300cf225fa5900f43024d}\label{structSobelFeldmanFilters_a4c602b545ef300cf225fa5900f43024d}} 
+\mbox{\hyperlink{structSobelFeldmanFilters_1_1YDirection}{Y\+Direction}} {\bfseries ydir}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+3-\/dimensional Sobel-\/\+Feldman filters 
+
+Contains Sobel-\/\+Feldman filters for all directions 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sobel.\+h\end{DoxyCompactItemize}

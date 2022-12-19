@@ -1,0 +1,62 @@
+\hypertarget{classCanny3D}{}\doxysection{Canny3D Class Reference}
+\label{classCanny3D}\index{Canny3D@{Canny3D}}
+
+
+3-\/dimensional Canny operator  
+
+
+
+
+{\ttfamily \#include $<$canny.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCanny3D_a25e43c62a9db438ab812102244580b58}{Detect\+Edges}} (std\+::vector$<$ cv\+::\+Mat $>$ \&images, int low\+\_\+threshold=50, int high\+\_\+threshold=150, std\+::string writing\+\_\+dir=\char`\"{}\char`\"{}, double sobel\+\_\+coef=1e-\/5, int blur\+\_\+ksize=5)
+\begin{DoxyCompactList}\small\item\em 3-\/dimensional Canny operator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+3-\/dimensional Canny operator 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCanny3D_a25e43c62a9db438ab812102244580b58}\label{classCanny3D_a25e43c62a9db438ab812102244580b58}} 
+\index{Canny3D@{Canny3D}!DetectEdges@{DetectEdges}}
+\index{DetectEdges@{DetectEdges}!Canny3D@{Canny3D}}
+\doxysubsubsection{\texorpdfstring{DetectEdges()}{DetectEdges()}}
+{\footnotesize\ttfamily void Canny3\+D\+::\+Detect\+Edges (\begin{DoxyParamCaption}\item[{std\+::vector$<$ cv\+::\+Mat $>$ \&}]{images,  }\item[{int}]{low\+\_\+threshold = {\ttfamily 50},  }\item[{int}]{high\+\_\+threshold = {\ttfamily 150},  }\item[{std\+::string}]{writing\+\_\+dir = {\ttfamily \char`\"{}\char`\"{}},  }\item[{double}]{sobel\+\_\+coef = {\ttfamily 1e-\/5},  }\item[{int}]{blur\+\_\+ksize = {\ttfamily 5} }\end{DoxyParamCaption})}
+
+
+
+3-\/dimensional Canny operator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em images} & Given images \\
+\hline
+{\em low\+\_\+threshold} & First threshold for the hysteresis procedure \\
+\hline
+{\em high\+\_\+threshold} & Second threshold for the hysteresis procedure \\
+\hline
+{\em writing\+\_\+dir} & Path to directory for saving results \\
+\hline
+{\em sobel\+\_\+coef} & Interpolation coefficient for \mbox{\hyperlink{classSobelOperator}{Sobel\+Operator}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classSobelOperator}{Sobel\+Operator}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em blur\+\_\+ksize} & Size of Gaussian filter, should be odd \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGaussianBlur3D}{Gaussian\+Blur3D}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+canny.\+h\item 
+canny.\+cpp\end{DoxyCompactItemize}
