@@ -1,62 +1,60 @@
-\hypertarget{classCanny3D}{}\doxysection{Canny3D Class Reference}
+\hypertarget{classCanny3D}{}\doxysection{Класс Canny3D}
 \label{classCanny3D}\index{Canny3D@{Canny3D}}
 
 
-3-\/dimensional Canny operator  
+Трехмерный оператор Кэнни  
 
 
 
 
 {\ttfamily \#include $<$canny.\+h$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classCanny3D_a25e43c62a9db438ab812102244580b58}{Detect\+Edges}} (std\+::vector$<$ cv\+::\+Mat $>$ \&images, int low\+\_\+threshold=50, int high\+\_\+threshold=150, std\+::string writing\+\_\+dir=\char`\"{}\char`\"{}, double sobel\+\_\+coef=1e-\/5, int blur\+\_\+ksize=5)
-\begin{DoxyCompactList}\small\item\em 3-\/dimensional Canny operator \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{classCanny3D_a145cd57b44830387db921f39c55f6a4c}{Detect\+Edges}} (std\+::vector$<$ cv\+::\+Mat $>$ \&images, int low\+\_\+threshold=50, int high\+\_\+threshold=150, double sobel\+\_\+coef=1e-\/5, int blur\+\_\+ksize=5)
+\begin{DoxyCompactList}\small\item\em Трехмерный оператор Кэнни \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-3-\/dimensional Canny operator 
+\doxysubsection{Подробное описание}
+Трехмерный оператор Кэнни 
 
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classCanny3D_a25e43c62a9db438ab812102244580b58}\label{classCanny3D_a25e43c62a9db438ab812102244580b58}} 
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classCanny3D_a145cd57b44830387db921f39c55f6a4c}\label{classCanny3D_a145cd57b44830387db921f39c55f6a4c}} 
 \index{Canny3D@{Canny3D}!DetectEdges@{DetectEdges}}
 \index{DetectEdges@{DetectEdges}!Canny3D@{Canny3D}}
 \doxysubsubsection{\texorpdfstring{DetectEdges()}{DetectEdges()}}
-{\footnotesize\ttfamily void Canny3\+D\+::\+Detect\+Edges (\begin{DoxyParamCaption}\item[{std\+::vector$<$ cv\+::\+Mat $>$ \&}]{images,  }\item[{int}]{low\+\_\+threshold = {\ttfamily 50},  }\item[{int}]{high\+\_\+threshold = {\ttfamily 150},  }\item[{std\+::string}]{writing\+\_\+dir = {\ttfamily \char`\"{}\char`\"{}},  }\item[{double}]{sobel\+\_\+coef = {\ttfamily 1e-\/5},  }\item[{int}]{blur\+\_\+ksize = {\ttfamily 5} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Mat $>$ Canny3\+D\+::\+Detect\+Edges (\begin{DoxyParamCaption}\item[{std\+::vector$<$ cv\+::\+Mat $>$ \&}]{images,  }\item[{int}]{low\+\_\+threshold = {\ttfamily 50},  }\item[{int}]{high\+\_\+threshold = {\ttfamily 150},  }\item[{double}]{sobel\+\_\+coef = {\ttfamily 1e-\/5},  }\item[{int}]{blur\+\_\+ksize = {\ttfamily 5} }\end{DoxyParamCaption})}
 
 
 
-3-\/dimensional Canny operator 
+Трехмерный оператор Кэнни 
 
 
-\begin{DoxyParams}{Parameters}
-{\em images} & Given images \\
+\begin{DoxyParams}{Аргументы}
+{\em images} & Изображения, на которых нужно найти границы \\
 \hline
-{\em low\+\_\+threshold} & First threshold for the hysteresis procedure \\
+{\em low\+\_\+threshold} & Нижний порог фильтрации \\
 \hline
-{\em high\+\_\+threshold} & Second threshold for the hysteresis procedure \\
+{\em high\+\_\+threshold} & Верхний порог фильтрации \\
 \hline
-{\em writing\+\_\+dir} & Path to directory for saving results \\
-\hline
-{\em sobel\+\_\+coef} & Interpolation coefficient for \mbox{\hyperlink{classSobelOperator}{Sobel\+Operator}} \\
+{\em sobel\+\_\+coef} & Коэффициент приближения соседних срезов для оператора Собеля \\
 \hline
 \end{DoxyParams}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{См. также}
 \mbox{\hyperlink{classSobelOperator}{Sobel\+Operator}} 
 \end{DoxySeeAlso}
 
-\begin{DoxyParams}{Parameters}
-{\em blur\+\_\+ksize} & Size of Gaussian filter, should be odd \\
+\begin{DoxyParams}{Аргументы}
+{\em blur\+\_\+ksize} & Размер фильтра Гаусса, должен быть нечетным \\
 \hline
 \end{DoxyParams}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{См. также}
 \mbox{\hyperlink{classGaussianBlur3D}{Gaussian\+Blur3D}} 
 \end{DoxySeeAlso}
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-canny.\+h\item 
-canny.\+cpp\end{DoxyCompactItemize}
+lib/canny.\+h\item 
+lib/canny.\+cpp\end{DoxyCompactItemize}

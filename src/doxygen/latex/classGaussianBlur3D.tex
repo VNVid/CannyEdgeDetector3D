@@ -1,30 +1,30 @@
-\hypertarget{classGaussianBlur3D}{}\doxysection{Gaussian\+Blur3D Class Reference}
+\hypertarget{classGaussianBlur3D}{}\doxysection{Класс Gaussian\+Blur3D}
 \label{classGaussianBlur3D}\index{GaussianBlur3D@{GaussianBlur3D}}
 
 
-3-\/dimensional Gaussian filter  
+Трехмерный фильтр Гаусса  
 
 
 
 
 {\ttfamily \#include $<$blur.\+h$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classGaussianBlur3D_ac8d57503d24d5afac6548c91e7fa35ca}\label{classGaussianBlur3D_ac8d57503d24d5afac6548c91e7fa35ca}} 
 {\bfseries Gaussian\+Blur3D} (std\+::vector$<$ cv\+::\+Mat $>$ \&images)
 \item 
 std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{classGaussianBlur3D_adb8d83f07e875fedb0ce4d75cae7e230}{Blur}} (size\+\_\+t ksize)
-\begin{DoxyCompactList}\small\item\em Blurres the images. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Размывает изображения \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-3-\/dimensional Gaussian filter 
+\doxysubsection{Подробное описание}
+Трехмерный фильтр Гаусса 
 
-Applies 3-\/dimensional Gaussian filter of given size to the images 
+Применяет трехмерный фильтр Гаусса заданного размера к изображениям 
 
-\doxysubsection{Member Function Documentation}
+\doxysubsection{Методы}
 \mbox{\Hypertarget{classGaussianBlur3D_adb8d83f07e875fedb0ce4d75cae7e230}\label{classGaussianBlur3D_adb8d83f07e875fedb0ce4d75cae7e230}} 
 \index{GaussianBlur3D@{GaussianBlur3D}!Blur@{Blur}}
 \index{Blur@{Blur}!GaussianBlur3D@{GaussianBlur3D}}
@@ -33,19 +33,19 @@ Applies 3-\/dimensional Gaussian filter of given size to the images
 
 
 
-Blurres the images. 
+Размывает изображения 
 
 
-\begin{DoxyParams}{Parameters}
-{\em ksize} & Size of filter, should be odd\\
+\begin{DoxyParams}{Аргументы}
+{\em ksize} & Размер фильтра, должен быть нечетным\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Blurred images 
+\begin{DoxyReturn}{Возвращает}
+Массив размытых изображений 
 \end{DoxyReturn}
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-blur.\+h\item 
-blur.\+cpp\end{DoxyCompactItemize}
+lib/blur.\+h\item 
+lib/blur.\+cpp\end{DoxyCompactItemize}

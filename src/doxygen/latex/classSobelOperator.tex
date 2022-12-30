@@ -1,37 +1,37 @@
-\hypertarget{classSobelOperator}{}\doxysection{Sobel\+Operator Class Reference}
+\hypertarget{classSobelOperator}{}\doxysection{Класс Sobel\+Operator}
 \label{classSobelOperator}\index{SobelOperator@{SobelOperator}}
 
 
-3-\/dimensional Sobel operator  
+Трехмерный оператор Собеля  
 
 
 
 
 {\ttfamily \#include $<$sobel.\+h$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classSobelOperator_aa037584677bacde0e19fdbff40ff6b12}{Sobel\+Operator}} (std\+::vector$<$ cv\+::\+Mat $>$ \&images, double coef=1e-\/5)
-\begin{DoxyCompactList}\small\item\em 3-\/dimensional Sobel operator \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Трехмерный оператор Собеля \end{DoxyCompactList}\item 
 std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{classSobelOperator_a3c87651ec830cbbd3b5a7428cdafd052}{get\+Gradient}} ()
-\begin{DoxyCompactList}\small\item\em Getter for gradients. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Геттер для градиентов \end{DoxyCompactList}\item 
 std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{classSobelOperator_a67f0746363b8109e31e492a52e586431}{get\+Grad\+DirectionX}} ()
-\begin{DoxyCompactList}\small\item\em Getter for gradients direction. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Геттер для направлений градиентов \end{DoxyCompactList}\item 
 std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{classSobelOperator_a803445834251f40d1a66bf5459c30005}{get\+Grad\+DirectionY}} ()
-\begin{DoxyCompactList}\small\item\em Getter for gradients direction. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Геттер для направлений градиентов \end{DoxyCompactList}\item 
 std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{classSobelOperator_a2771c4a9b8ac13f909903fdfbe8c5618}{get\+Grad\+DirectionZ}} ()
-\begin{DoxyCompactList}\small\item\em Getter for gradients direction. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Геттер для направлений градиентов \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::pair$<$ cv\+::\+Mat, cv\+::\+Mat $>$ $>$ \mbox{\hyperlink{classSobelOperator_a95602b55981339b93a4f2b8bdc28a46e}{get\+Neighbour\+Grads}} ()
-\begin{DoxyCompactList}\small\item\em Getter for interpolated gradients. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Геттер для градиентов риближенных соседних срезов \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-3-\/dimensional Sobel operator 
+\doxysubsection{Подробное описание}
+Трехмерный оператор Собеля 
 
-Computes gradients and their directions along 3 axes, also computes gradients for interpolation slices 
+Считает градиенты и их направление вдоль 3х осей, также считает градиенты для приближенных соседних срезов 
 
-\doxysubsection{Constructor \& Destructor Documentation}
+\doxysubsection{Конструктор(ы)}
 \mbox{\Hypertarget{classSobelOperator_aa037584677bacde0e19fdbff40ff6b12}\label{classSobelOperator_aa037584677bacde0e19fdbff40ff6b12}} 
 \index{SobelOperator@{SobelOperator}!SobelOperator@{SobelOperator}}
 \index{SobelOperator@{SobelOperator}!SobelOperator@{SobelOperator}}
@@ -40,18 +40,18 @@ Computes gradients and their directions along 3 axes, also computes gradients fo
 
 
 
-3-\/dimensional Sobel operator 
+Трехмерный оператор Собеля 
 
 
-\begin{DoxyParams}{Parameters}
-{\em images} & Given images \\
+\begin{DoxyParams}{Аргументы}
+{\em images} & Обрабатываемые изображения \\
 \hline
-{\em coef} & Interpolation coefficient \\
+{\em coef} & Коэффициент приближения соседних срезов \\
 \hline
 \end{DoxyParams}
 
 
-\doxysubsection{Member Function Documentation}
+\doxysubsection{Методы}
 \mbox{\Hypertarget{classSobelOperator_a67f0746363b8109e31e492a52e586431}\label{classSobelOperator_a67f0746363b8109e31e492a52e586431}} 
 \index{SobelOperator@{SobelOperator}!getGradDirectionX@{getGradDirectionX}}
 \index{getGradDirectionX@{getGradDirectionX}!SobelOperator@{SobelOperator}}
@@ -60,13 +60,13 @@ Computes gradients and their directions along 3 axes, also computes gradients fo
 
 
 
-Getter for gradients direction. 
+Геттер для направлений градиентов 
 
-Returns gradients directions along columns if already computed, otherwise calls \begin{DoxySeeAlso}{See also}
-Count()
+Если градиенты еще не посчитаны, вызывает метод Count() \begin{DoxySeeAlso}{См. также}
+Count(). Возвращает составляющую направлений градиентов вдоль столбцов. Возможные значения\+: 0 -\/ нет составляющей вдоль выбранной оси, 1 -\/ есть составляющая вдоль выбранной оси, -\/1 -\/ есть составляющая против выбранной оси
 \end{DoxySeeAlso}
-\begin{DoxyReturn}{Returns}
-Vector of images containing directions 
+\begin{DoxyReturn}{Возвращает}
+Массив изображений со значениями направления 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classSobelOperator_a803445834251f40d1a66bf5459c30005}\label{classSobelOperator_a803445834251f40d1a66bf5459c30005}} 
 \index{SobelOperator@{SobelOperator}!getGradDirectionY@{getGradDirectionY}}
@@ -76,13 +76,13 @@ Vector of images containing directions
 
 
 
-Getter for gradients direction. 
+Геттер для направлений градиентов 
 
-Returns gradients directions along rows if already computed, otherwise calls \begin{DoxySeeAlso}{See also}
-Count()
+Если градиенты еще не посчитаны, вызывает метод Count() \begin{DoxySeeAlso}{См. также}
+Count(). Возвращает составляющую направлений градиентов вдоль строк. Возможные значения\+: 0 -\/ нет составляющей вдоль выбранной оси, 1 -\/ есть составляющая вдоль выбранной оси, -\/1 -\/ есть составляющая против выбранной оси
 \end{DoxySeeAlso}
-\begin{DoxyReturn}{Returns}
-Vector of images containing directions 
+\begin{DoxyReturn}{Возвращает}
+Массив изображений со значениями направления 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classSobelOperator_a2771c4a9b8ac13f909903fdfbe8c5618}\label{classSobelOperator_a2771c4a9b8ac13f909903fdfbe8c5618}} 
 \index{SobelOperator@{SobelOperator}!getGradDirectionZ@{getGradDirectionZ}}
@@ -92,13 +92,13 @@ Vector of images containing directions
 
 
 
-Getter for gradients direction. 
+Геттер для направлений градиентов 
 
-Returns gradients directions along images if already computed, otherwise calls \begin{DoxySeeAlso}{See also}
-Count()
+Если градиенты еще не посчитаны, вызывает метод Count() \begin{DoxySeeAlso}{См. также}
+Count(). Возвращает составляющую направлений градиентов вдоль оси, перпендикулярной плоскости картинок. Возможные значения\+: 0 -\/ нет составляющей вдоль выбранной оси, 1 -\/ есть составляющая вдоль выбранной оси, -\/1 -\/ есть составляющая против выбранной оси
 \end{DoxySeeAlso}
-\begin{DoxyReturn}{Returns}
-Vector of images containing directions 
+\begin{DoxyReturn}{Возвращает}
+Массив изображений со значениями направления 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classSobelOperator_a3c87651ec830cbbd3b5a7428cdafd052}\label{classSobelOperator_a3c87651ec830cbbd3b5a7428cdafd052}} 
 \index{SobelOperator@{SobelOperator}!getGradient@{getGradient}}
@@ -108,13 +108,13 @@ Vector of images containing directions
 
 
 
-Getter for gradients. 
+Геттер для градиентов 
 
-Returns gradients if already computed, otherwise calls Count() \begin{DoxySeeAlso}{See also}
-Count()
+Если градиенты еще не посчитаны, вызывает метод Count() \begin{DoxySeeAlso}{См. также}
+Count(). Возвращает значение градиентов.
 \end{DoxySeeAlso}
-\begin{DoxyReturn}{Returns}
-Vector of images containing gradients 
+\begin{DoxyReturn}{Возвращает}
+Массив карт градиентов 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classSobelOperator_a95602b55981339b93a4f2b8bdc28a46e}\label{classSobelOperator_a95602b55981339b93a4f2b8bdc28a46e}} 
 \index{SobelOperator@{SobelOperator}!getNeighbourGrads@{getNeighbourGrads}}
@@ -124,17 +124,17 @@ Vector of images containing gradients
 
 
 
-Getter for interpolated gradients. 
+Геттер для градиентов риближенных соседних срезов 
 
-Returns gradients if already computed, otherwise calls \begin{DoxySeeAlso}{See also}
-Count()
+Если градиенты еще не посчитаны, вызывает метод Count() \begin{DoxySeeAlso}{См. также}
+Count(). Возвращает значение градиентов.
 \end{DoxySeeAlso}
-\begin{DoxyReturn}{Returns}
-Vector of images containing gradients 
+\begin{DoxyReturn}{Возвращает}
+Массив карт градиентов 
 \end{DoxyReturn}
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-sobel.\+h\item 
-sobel.\+cpp\end{DoxyCompactItemize}
+lib/sobel.\+h\item 
+lib/sobel.\+cpp\end{DoxyCompactItemize}

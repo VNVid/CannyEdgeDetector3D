@@ -1,8 +1,8 @@
-\hypertarget{structSobelFeldmanFilters}{}\doxysection{Sobel\+Feldman\+Filters Struct Reference}
+\hypertarget{structSobelFeldmanFilters}{}\doxysection{Структура Sobel\+Feldman\+Filters}
 \label{structSobelFeldmanFilters}\index{SobelFeldmanFilters@{SobelFeldmanFilters}}
 
 
-3-\/dimensional Sobel-\/\+Feldman filters  
+Трехмерные фильтры Собеля-\/Фельдмана  
 
 
 
@@ -11,9 +11,9 @@
 
 
 
-Collaboration diagram for Sobel\+Feldman\+Filters\+:
+Граф связей класса Sobel\+Feldman\+Filters\+:
 % FIG 0
-\doxysubsection*{Classes}
+\doxysubsection*{Классы}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structSobelFeldmanFilters_1_1XDirection}{X\+Direction}}
@@ -22,7 +22,7 @@ struct \mbox{\hyperlink{structSobelFeldmanFilters_1_1YDirection}{Y\+Direction}}
 \item 
 struct \mbox{\hyperlink{structSobelFeldmanFilters_1_1ZDirection}{Z\+Direction}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+\doxysubsection*{Открытые атрибуты}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{structSobelFeldmanFilters_a081c79de0e005ed4fe86905946ed0669}\label{structSobelFeldmanFilters_a081c79de0e005ed4fe86905946ed0669}} 
@@ -36,11 +36,11 @@ struct \mbox{\hyperlink{structSobelFeldmanFilters_1_1ZDirection}{Z\+Direction}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-3-\/dimensional Sobel-\/\+Feldman filters 
+\doxysubsection{Подробное описание}
+Трехмерные фильтры Собеля-\/Фельдмана 
 
-Contains Sobel-\/\+Feldman filters for all directions 
+Содержит фильтры для всех направлений 
 
-The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
 \item 
-sobel.\+h\end{DoxyCompactItemize}
+lib/sobel.\+h\end{DoxyCompactItemize}

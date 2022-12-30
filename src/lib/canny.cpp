@@ -1,64 +1,26 @@
 #include <canny.h>
 
-void Canny3D::DetectEdges(std::vector<cv::Mat>& images, int low_threshold,
-                          int high_threshold, std::string writing_dir,
-                          double sobel_coef, int blur_ksize) {
+std::vector<cv::Mat> Canny3D::DetectEdges(std::vector<cv::Mat>& images,
+                                          int low_threshold, int high_threshold,
+                                          double sobel_coef, int blur_ksize) {
+  std::cout << "Applying Gaussian filter" << std::endl;
   // Gaussian filter
   std::vector<cv::Mat> blurred_images = GaussianBlur3D(images).Blur(blur_ksize);
-  for (size_t i = 0; i < blurred_images.size(); i++) {
-    cv::imwrite(writing_dir + "blur" + std::to_string(i + 1) + ".png",
-                blurred_images[i]);
-  }
 
+  std::cout << "Counting gradients" << std::endl;
   SobelOperator sop(blurred_images, sobel_coef);
 
-  std::vector<cv::Mat> grad_z = sop.getGradient();
-  for (size_t i = 0; i < grad_z.size(); i++) {
-    cv::imwrite(writing_dir + "grad" + std::to_string(i + 1) + ".png",
-                grad_z[i]);
-  }
-
-  std::vector<cv::Mat> visual_grad;
-  for (cv::Mat img : grad_z) {
-    visual_grad.push_back(cv::Mat::zeros(img.size(), CV_32SC1));
-  }
-  std::vector<cv::Mat> xdir = sop.getGradDirectionX();
-  std::vector<cv::Mat> ydir = sop.getGradDirectionY();
-  std::vector<cv::Mat> zdir = sop.getGradDirectionZ();
-  for (size_t img_i = 1; img_i < visual_grad.size() - 1; img_i++) {
-    for (size_t i = 1; i < visual_grad[img_i].rows - 1; i += 10) {
-      for (size_t j = 1; j < visual_grad[img_i].cols - 1; j += 10) {
-        int dx = xdir[img_i].at<int32_t>(i, j);
-        int dy = ydir[img_i].at<int32_t>(i, j);
-        int dz = zdir[img_i].at<int32_t>(i, j);
-
-        visual_grad[img_i].at<int32_t>(i + dy, j + dx) = 1000;
-        visual_grad[img_i].at<int32_t>(i, j) = 1000;
-      }
-    }
-  }
-  for (size_t i = 0; i < visual_grad.size(); i++) {
-    cv::imwrite(writing_dir + "visualgrad" + std::to_string(i + 1) + ".png",
-                visual_grad[i]);
-  }
-
+  std::cout << "Non-maximum suppression stage" << std::endl;
   std::vector<cv::Mat> edge_images = NonMaximumSuppression(sop);
-  for (size_t i = 0; i < edge_images.size(); i++) {
-    cv::imwrite(writing_dir + "nmaxsupr" + std::to_string(i + 1) + ".png",
-                edge_images[i]);
-  }
 
+  std::cout << "Double thresholding stage" << std::endl;
   DoubleThresholding(edge_images, low_threshold, high_threshold);
-  for (size_t i = 0; i < edge_images.size(); i++) {
-    cv::imwrite(writing_dir + "thresh" + std::to_string(i + 1) + ".png",
-                edge_images[i]);
-  }
 
+  std::cout << "Detecting edges" << std::endl;
   EdgeTrackingByHysteresis(edge_images);
-  for (size_t i = 0; i < edge_images.size(); i++) {
-    cv::imwrite(writing_dir + "final" + std::to_string(i + 1) + ".png",
-                edge_images[i]);
-  }
+
+  std::cout << "End of detection" << std::endl;
+  return edge_images;
 }
 
 std::vector<cv::Mat> Canny3D::NonMaximumSuppression(SobelOperator& sop) {
