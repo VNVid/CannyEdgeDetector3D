@@ -47,7 +47,7 @@ std::pair<double, double> CountErrors(cv::Mat result, cv::Mat ideal) {
 }
 
 int main() {
-  /*std::cout << "Enter path to the result image\n";
+  std::cout << "Enter path to the result image\n";
   std::string path_result;
   std::cin >> path_result;
   std::cout << "Enter path to image with ideal edges\n";
@@ -58,40 +58,5 @@ int main() {
   cv::Mat ideal = cv::imread(path_ideal, cv::IMREAD_GRAYSCALE);
   std::pair<double, double> errors = CountErrors(result, ideal);
 
-  std::cout << errors.first << " " << errors.second << std::endl;*/
-
-  std::vector<double> first_err;
-  std::vector<double> second_err;
-  for (size_t i = 3; i < 10; i++) {
-    cv::Mat result = cv::imread("images/110" + std::to_string(i) + ".png",
-                                cv::IMREAD_UNCHANGED);
-    cv::Mat edges;
-    cv::Canny(result, edges, 40, 160, 3, false);
-    cv::Mat ideal =
-        cv::imread("images/SPTV110" + std::to_string(i) + ".tif.seg.png",
-                   cv::IMREAD_GRAYSCALE);
-    std::pair<double, double> errors = CountErrors(edges, ideal);
-    first_err.push_back(errors.first);
-    second_err.push_back(errors.second);
-  }
-  for (size_t i = 10; i < 13; i++) {
-    cv::Mat result = cv::imread("images/11" + std::to_string(i) + ".png",
-                                cv::IMREAD_UNCHANGED);
-    cv::Mat edges;
-    cv::Canny(result, edges, 40, 160, 3, false);
-    cv::Mat ideal =
-        cv::imread("images/SPTV11" + std::to_string(i) + ".tif.seg.png",
-                   cv::IMREAD_GRAYSCALE);
-    std::pair<double, double> errors = CountErrors(edges, ideal);
-    first_err.push_back(errors.first);
-    second_err.push_back(errors.second);
-  }
-
-  for (double a : first_err) {
-    std::cout << a << ", ";
-  }
-  std::cout << std::endl;
-  for (double a : second_err) {
-    std::cout << a << ", ";
-  }
+  std::cout << errors.first << " " << errors.second << std::endl;
 }
