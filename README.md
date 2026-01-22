@@ -70,6 +70,7 @@ The example reads a set of slices, runs `Canny3D`, and (optionally) writes resul
 
 Quality was evaluated against “ideal” contours from the CT-OCR-2022 dataset using
 Type I / Type II error probabilities based on false negatives / false positives normalized by contour size.
+
 A comparison with OpenCV’s 2D Canny shows that results depend on thresholds and slice blocks,
 and that the interpolation step visibly improves contour thinness and reduces spurious responses in many cases.
 
